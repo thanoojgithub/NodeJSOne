@@ -50,8 +50,13 @@ Using **Thunder Client** is a lightweight Rest API Client Extension for Visual S
 POST API
 --------
 ```
-http://localhost:4000/posts  
-{"id" : 5, "msg" : "good morning"}  
+http://localhost:4000/phones/phone
+{
+  "id": "7",
+  "name": "Nokia G20",
+  "model": "n-007",
+  "release_date": "20220401"
+}
 Status: 200 OK
 ```
 
@@ -60,42 +65,110 @@ Status: 200 OK
 GET APIs
 --------
 ```
-http://localhost:4000/posts/id/4  
-{  
-  "id": "4",  
-  "msg": "good afternoon"  
-}  
+http://localhost:4000/phones
+[
+  {
+    "id": "1",
+    "model": "n-0001",
+    "name": "Nokia 5.3",
+    "release_date": "20210101"
+  },
+  {
+    "id": "2",
+    "model": "n-0002",
+    "name": "Nokia 5.4",
+    "release_date": "20210201"
+  },
+  {
+    "id": "3",
+    "model": "n-0003",
+    "name": "Nokia 7.1",
+    "release_date": "20200701"
+  },
+  {
+    "id": "4",
+    "model": "n-0004",
+    "name": "Nokia 7.2",
+    "release_date": "20200801"
+  },
+  {
+    "id": "5",
+    "model": "n-0005",
+    "name": "Nokia 8.1",
+    "release_date": "20200901"
+  }
+]
 ```
+
 ```
-http://localhost:4000/posts/msg/aft  
-[  
-  {  
-    "id": "2",  
-    "msg": "good afternoon"  
-  },  
-  {  
-    "id": "4",  
-    "msg": "good afternoon"  
-  }  
-]  
+http://localhost:4000/phones/id/5
+{
+  "id": "5",
+  "model": "n-0005",
+  "name": "Nokia 8.1",
+  "release_date": "20200901"
+}
 ```
+
 ```
-http://localhost:4000/posts  
-[  
-  {  
-    "id": "1",  
-    "msg": "good morning"  
-  },  
-  {  
-    "id": "2",  
-    "msg": "good afternoon"  
-  },  
-  {  
-    "id": "3",  
-    "msg": "good morning"  
-  },  
-  {  
-    "id": "4",  
-    "msg": "good afternoon"  
-  }  
-]  
+http://localhost:4000/phones/names
+[
+  {
+    "id": "1",
+    "name": "Nokia 5.3"
+  },
+  {
+    "id": "2",
+    "name": "Nokia 5.4"
+  },
+  {
+    "id": "3",
+    "name": "Nokia 7.1"
+  },
+  {
+    "id": "4",
+    "name": "Nokia 7.2"
+  },
+  {
+    "id": "5",
+    "name": "Nokia 8.1"
+  }
+]
+```
+
+```
+http://localhost:4000/phones/name/nok
+[
+  {
+    "id": "1",
+    "model": "n-0001",
+    "name": "Nokia 5.3",
+    "release_date": "20210101"
+  },
+  {
+    "id": "2",
+    "model": "n-0002",
+    "name": "Nokia 5.4",
+    "release_date": "20210201"
+  },
+  {
+    "id": "3",
+    "model": "n-0003",
+    "name": "Nokia 7.1",
+    "release_date": "20200701"
+  },
+  {
+    "id": "4",
+    "model": "n-0004",
+    "name": "Nokia 7.2",
+    "release_date": "20200801"
+  },
+  {
+    "id": "5",
+    "model": "n-0005",
+    "name": "Nokia 8.1",
+    "release_date": "20200901"
+  }
+]
+```
+
