@@ -71,7 +71,7 @@ app.get('/phones/name/:name', async (req, res) => {
 })
 
 // POST a new phone JSON data
-app.post('/phones', async (req, res) => {
+app.post('/phones/phone', async (req, res) => {
     console.log("req.body", req.body)
     console.log("db.data.phoneList", phoneList)
     const post = phoneList.push(req.body)
