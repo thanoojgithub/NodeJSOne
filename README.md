@@ -48,8 +48,8 @@ Using **Thunder Client** is a lightweight Rest API Client Extension for Visual S
 ```
 
 
-POST API
---------
+### POST API
+
 ```json
 http://localhost:4000/phones/phone
 {
@@ -63,8 +63,8 @@ Status: 200 OK
 
 
 
-GET APIs
---------
+### GET APIs
+
 ```json
 http://localhost:4000/phones
 [
