@@ -23,7 +23,7 @@ npm -v
 ```
 
 ```
-npm install express cors lowdb nanoid body-parser
+npm install express cors lowdb
 ```
 
 ```
