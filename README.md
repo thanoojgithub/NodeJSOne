@@ -1,20 +1,21 @@
 # NodeJSOne
-NodeJS ExpressJS LowDB JSONFile
+### NodeJS ExpressJS LowDB JSONFile
 
 
 <br><br>
 
-**Steps to execute:**
+## Steps to execute:
 
 
-```
+```ruby
 sudo apt update
 ```
-```
+
+```ruby
 sudo apt install nodejs npm
 ```
 
-```
+```ruby
 node -v  
 v16.15.1
 
@@ -22,15 +23,15 @@ npm -v
 8.11.0
 ```
 
-```
+```ruby
 npm install express cors lowdb
 ```
 
-```
+```ruby
 npm install -g nodemon
 ```
 
-```
+```js
 thanooj@thanooj-Inspiron-3521:~/sourceCode/NodeJSTwo$ nodemon  
 [nodemon] 2.0.18  
 [nodemon] to restart at any time, enter 'rs'  
@@ -42,14 +43,14 @@ Low { adapter: JSONFile {}, data: null }
 Backend is running on http://localhost:4000  
 ```
 
-```
+```html
 Using **Thunder Client** is a lightweight Rest API Client Extension for Visual Studio Code  
 ```
 
 
 POST API
 --------
-```
+```json
 http://localhost:4000/phones/phone
 {
   "id": "7",
@@ -64,7 +65,7 @@ Status: 200 OK
 
 GET APIs
 --------
-```
+```json
 http://localhost:4000/phones
 [
   {
@@ -100,7 +101,7 @@ http://localhost:4000/phones
 ]
 ```
 
-```
+```json
 http://localhost:4000/phones/id/5
 {
   "id": "5",
@@ -110,7 +111,7 @@ http://localhost:4000/phones/id/5
 }
 ```
 
-```
+```json
 http://localhost:4000/phones/names
 [
   {
@@ -136,7 +137,7 @@ http://localhost:4000/phones/names
 ]
 ```
 
-```
+```json
 http://localhost:4000/phones/name/nok
 [
   {
