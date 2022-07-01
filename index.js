@@ -31,6 +31,10 @@ const logStream = rfs.createStream("access.log", {
 app.use(morgan(':date - :method :url - status :status, res-content-length :res[content-length] Bytes, process-time :total-time ms', { stream: logStream }))
 
 
+//GET /
+app.get('/', async (req, res) => {
+    res.sendFile(join(__dirname, '/view', 'index.html'));
+})
 
 //GET all phones
 app.get('/phones/', async (req, res) => {
