@@ -24,7 +24,7 @@ npm -v
 ```
 
 ```ruby
-npm install express cors lowdb
+npm install express cors lowdb morgan rotating-file-stream
 ```
 
 ```ruby
