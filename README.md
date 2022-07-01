@@ -176,4 +176,83 @@ http://localhost:4000/phones/name/nok
   }
 ]
 ```
-
+```json
+http://localhost:4000/brands
+[
+  {
+    "id": "b001",
+    "name": "apple",
+    "logo": "logo/apple.png"
+  },
+  {
+    "id": "b002",
+    "name": "iqoo",
+    "logo": "logo/iqoo.png"
+  },
+  {
+    "id": "b003",
+    "name": "Nokia",
+    "logo": "logo/Nokia.png"
+  },
+  {
+    "id": "b004",
+    "name": "moto",
+    "logo": "logo/moto.png"
+  },
+  {
+    "id": "b005",
+    "name": "OPPO",
+    "logo": "logo/OPPO.png"
+  },
+  {
+    "id": "b006",
+    "name": "Vivo",
+    "logo": "logo/Vivo.png"
+  },
+  {
+    "id": "b007",
+    "name": "POCO",
+    "logo": "logo/POCO.png"
+  }
+]
+```
+```json
+http://localhost:4000/phones/brand/b003
+[
+  {
+    "id": "1",
+    "model": "n-0001",
+    "name": "Nokia 5.3",
+    "release_date": "20210101",
+    "brand_id": "b003"
+  },
+  {
+    "id": "2",
+    "model": "n-0002",
+    "name": "Nokia 5.4",
+    "release_date": "20210201",
+    "brand_id": "b003"
+  },
+  {
+    "id": "3",
+    "model": "n-0003",
+    "name": "Nokia 7.1",
+    "release_date": "20200701",
+    "brand_id": "b003"
+  },
+  {
+    "id": "4",
+    "model": "n-0004",
+    "name": "Nokia 7.2",
+    "release_date": "20200801",
+    "brand_id": "b003"
+  },
+  {
+    "id": "5",
+    "model": "n-0005",
+    "name": "Nokia 8.1",
+    "release_date": "20200901",
+    "brand_id": "b003"
+  }
+]
+```
