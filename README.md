@@ -24,6 +24,10 @@ npm -v
 ```
 
 ```ruby
+git clone https://github.com/thanoojgithub/NodeJSOne.git
+```
+
+```ruby
 npm install express cors lowdb morgan rotating-file-stream
 ```
 
