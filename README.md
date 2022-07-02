@@ -16,31 +16,94 @@ sudo apt install nodejs npm
 ```
 
 ```ruby
+npm install -g nodemon
+```
+
+```ruby
 node -v  
 v16.15.1
 
 npm -v  
 8.11.0
+
+nodemon -v
+2.0.18
+```
+
+
+```ruby
+git clone https://github.com/thanoojgithub/NodeJSOne.git -b main NodeJSOne2
 ```
 
 ```ruby
-git clone https://github.com/thanoojgithub/NodeJSOne.git
-```
-
-```ruby
-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
-```
-
-```ruby
-npm install express cors lowdb morgan rotating-file-stream
-```
-
-```ruby
-npm install -g nodemon
+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
 ```
 
 ```js
-thanooj@thanooj-Inspiron-3521:~/sourceCode/NodeJSTwo$ nodemon  
+thanooj@thanooj-Inspiron-3521:~/sourceCode/gitSources/NodeJSOne2$ ls -ltr
+total 60
+-rw-rw-r-- 1 thanooj thanooj  1488 Jul  1 23:20 db.json
+drwxrwxr-x 2 thanooj thanooj  4096 Jul  2 00:54 images
+drwxrwxr-x 3 thanooj thanooj  4096 Jul  2 11:04 public
+-rw-rw-r-- 1 thanooj thanooj  3665 Jul  2 11:31 index.js
+-rw-rw-r-- 1 thanooj thanooj 33368 Jul  2 12:32 access.log
+drwxrwxr-x 2 thanooj thanooj  4096 Jul  2 12:50 view
+-rw-rw-r-- 1 thanooj thanooj  3889 Jul  2 13:10 README.md
+thanooj@thanooj-Inspiron-3521:~/sourceCode/gitSources/NodeJSOne2$
+```
+
+```js
+thanooj@thanooj-Inspiron-3521:~/sourceCode/gitSources/NodeJSOne2$ npm init -y
+Wrote to /home/thanooj/sourceCode/gitSources/NodeJSOne2/package.json:
+
+{
+  "name": "nodejsone2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thanoojgithub/NodeJSOne.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thanoojgithub/NodeJSOne/issues"
+  },
+  "homepage": "https://github.com/thanoojgithub/NodeJSOne#readme"
+}
+```
+
+```js
+npm install express cors lowdb path morgan rotating-file-stream
+```
+
+```js
+thanooj@thanooj-Inspiron-3521:~/sourceCode/gitSources/NodeJSOne2$ ls -ltr
+total 124
+-rw-rw-r--  1 thanooj thanooj  1488 Jul  1 23:20 db.json
+drwxrwxr-x  2 thanooj thanooj  4096 Jul  2 00:54 images
+drwxrwxr-x  3 thanooj thanooj  4096 Jul  2 11:04 public
+-rw-rw-r--  1 thanooj thanooj  3665 Jul  2 11:31 index.js
+-rw-rw-r--  1 thanooj thanooj 33368 Jul  2 12:32 access.log
+drwxrwxr-x  2 thanooj thanooj  4096 Jul  2 12:50 view
+-rw-rw-r--  1 thanooj thanooj  3889 Jul  2 13:10 README.md
+-rw-rw-r--  1 thanooj thanooj 53752 Jul  2 13:21 package-lock.json
+-rw-rw-r--  1 thanooj thanooj   658 Jul  2 13:21 package.json
+drwxrwxr-x 46 thanooj thanooj  4096 Jul  2 13:21 node_modules
+thanooj@thanooj-Inspiron-3521:~/sourceCode/gitSources/NodeJSOne2$ 
+```
+
+```js
+Add     "type": "module"     in package.json
+```
+
+```js
+thanooj@thanooj-Inspiron-3521:~/sourceCode/gitSources/NodeJSOne2$ nodemon  
 [nodemon] 2.0.18  
 [nodemon] to restart at any time, enter 'rs'  
 [nodemon] watching path(s): *.*  
