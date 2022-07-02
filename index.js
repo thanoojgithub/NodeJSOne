@@ -26,9 +26,13 @@ app.use(express.urlencoded({ extended: true }));
 const logStream = rfs.createStream("access.log", {
     size: "1M", // rotate every 10 MegaBytes written
     interval: "1d", // rotate daily
-    compress: "gzip" // compress rotated files
+    compress: "gzip" // compress rotated file 
   });
 app.use(morgan(':date - :method :url - status :status, res-content-length :res[content-length] Bytes, process-time :total-time ms', { stream: logStream }))
+app.use(express.static(join(__dirname, 'public')));
+app.use('/images', express.static('images'));
+
+
 
 
 //GET /
