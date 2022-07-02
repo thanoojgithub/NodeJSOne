@@ -28,7 +28,7 @@ git clone https://github.com/thanoojgithub/NodeJSOne.git
 ```
 
 ```ruby
-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
+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
 ```
 
 ```ruby
