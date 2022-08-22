@@ -17,7 +17,7 @@ db.data ||= { phoneList: [] , brands: []}
 let { phoneList } = db.data
 console.log("phoneList", phoneList);
 let { brands } = db.data
-console.log(brands);
+console.log("brands", brands);
 
 const app = express()
 app.use(cors())
@@ -101,6 +101,32 @@ app.get('/phones/name/:name', async (req, res) => {
     res.json(phones)
 })
 
+// GET a phone by Brand-ID
+app.get('/phones/brand_id_name/:brand_id_name', async (req, res) => {
+    console.log("req.params.brand_id", req.params.brand_id)
+    const phone = phoneList.filter((p) => (p.brand_id.toLowerCase().includes(req.params.brand_id_name.toLowerCase())) || (p.name.toLowerCase().includes(req.params.brand_id_name.toLowerCase())))
+    if (!phone) return res.sendStatus(404)
+    console.log("-------------------------------------------")
+    console.log("/phones/brand_id_name/:brand_id_name", phone)
+    console.log("-------------------------------------------")
+    res.json(phone)
+})
+
+// GET a latest 10 phones
+app.get('/phones/latest/:limit', async (req, res) => {
+    console.log("req.params.limit", req.params.limit)
+    console.log(phoneList)
+    var indices = new Array(phoneList.size);
+    const phones = phoneList.sort(function(a, b) {
+            return a.release_date - b.release_date;
+        });
+    if (!phones) return res.sendStatus(404)
+    console.log("--------------------------")
+    console.log("/phones/latest/:limit", phones)
+    console.log("--------------------------")
+    res.json(phones)
+})
+
 // POST a new phone JSON data
 app.post('/phones/phone', async (req, res) => {
     console.log("req.body", req.body)
@@ -109,8 +135,6 @@ app.post('/phones/phone', async (req, res) => {
     await db.write()
     res.sendStatus(200)
 })
-  
-
 
 // Node + Express Application is up and running
 const PORT = process.env.PORT || 4000;
