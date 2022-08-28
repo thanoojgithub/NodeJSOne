@@ -112,19 +112,19 @@ app.get('/phones/brand_id_name/:brand_id_name', async (req, res) => {
     res.json(phone)
 })
 
-// GET a latest 10 phones
+// GET a latest n phones
 app.get('/phones/latest/:limit', async (req, res) => {
     console.log("req.params.limit", req.params.limit)
     console.log(phoneList)
     var indices = new Array(phoneList.size);
     const phones = phoneList.sort(function(a, b) {
-            return a.release_date - b.release_date;
+            return b.release_date - a.release_date;
         });
     if (!phones) return res.sendStatus(404)
     console.log("--------------------------")
     console.log("/phones/latest/:limit", phones)
     console.log("--------------------------")
-    res.json(phones)
+    res.json(phones.slice(0, req.params.limit))
 })
 
 // POST a new phone JSON data
