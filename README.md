@@ -323,3 +323,50 @@ http://localhost:4000/phones/brand/b003
   }
 ]
 ```
+
+```json
+http://localhost:4000/phones/latest/4
+[
+  {
+    "id": "6",
+    "model": "m-0001",
+    "name": "Moto G82 5G",
+    "release_date": "20220401",
+    "brand_id": "b004"
+  },
+  {
+    "id": "2",
+    "model": "n-0002",
+    "name": "Nokia 5.4",
+    "release_date": "20210201",
+    "brand_id": "b003"
+  },
+  {
+    "id": "1",
+    "model": "n-0001",
+    "name": "Nokia 5.3",
+    "release_date": "20210101",
+    "brand_id": "b003"
+  },
+  {
+    "id": "5",
+    "model": "n-0005",
+    "name": "Nokia 8.1",
+    "release_date": "20200901",
+    "brand_id": "b003"
+  }
+]
+````
+
+```json
+http://localhost:4000/phones/model_name/m
+[
+  {
+    "id": "6",
+    "model": "m-0001",
+    "name": "Moto G82 5G",
+    "release_date": "20220401",
+    "brand_id": "b004"
+  }
+]
+````
